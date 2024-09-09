@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setTheme(R.style.MealsSplashScreen)
+        setContentView(binding.root)
         val viewModel: MealsViewModel by viewModels()
         val rv = findViewById<RecyclerView>(R.id.rv)
         val mealsAdapter = MealsAdapter()
